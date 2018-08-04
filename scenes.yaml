@@ -1,0 +1,6 @@
+  - name: Goodnight
+    entities:
+      light.goodnight:
+        state: off
+      
+

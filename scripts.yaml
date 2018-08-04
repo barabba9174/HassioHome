@@ -1,0 +1,116 @@
+  sky_living_room_activity_off:
+    alias: 'Turn Off Sky Living Room'
+    sequence:
+      - service: remote.send_command
+        data_template:
+          command: PowerOff
+          device: 34574624
+          entity_id: remote.living_room
+      - service: remote.turn_on
+        data_template:
+          entity_id: remote.living_room
+          activity: PowerOff
+      - service: remote.turn_off
+        data:
+          entity_id: remote.living_room
+
+  sky_living_room_activity_on:
+    alias: 'Turn On Sky Living Room'
+    sequence:
+      - service: remote.send_command
+        data_template:
+          command: PowerOn
+          device: 34574624
+          entity_id: remote.living_room
+      - service: remote.turn_on
+        data_template:
+          entity_id: remote.living_room
+          activity: Watch Sky
+
+
+  sky_bedroom_activity_off:
+    alias: 'Turn Off Sky Bedroom'
+    sequence:
+      - service: remote.send_command
+        data_template:
+          command: PowerOff
+          device: 32352177
+          entity_id: remote.bedroom
+      - service: remote.turn_on
+        data_template:
+          entity_id: remote.bedroom
+          activity: PowerOff
+      - service: remote.turn_off
+        data:
+          entity_id: remote.bedroom
+
+  sky_bedroom_activity_on:
+    alias: 'Turn On Sky Bedroom'
+    sequence:
+      - service: remote.send_command
+        data_template:
+          command: PowerOn
+          device: 32352177
+          entity_id: remote.bedroom
+      - service: remote.turn_on
+        data_template:
+          entity_id: remote.bedroom
+          activity: Watch Sky bedroom
+
+  tv_living_room_activity_off:
+    alias: 'Turn Off Tv'
+    sequence:
+      - service: remote.send_command
+        data_template:
+          command: PowerOff
+          device: 15207304
+          entity_id: remote.living_room
+      - service: remote.turn_on
+        data_template:
+          entity_id: remote.living_room
+          activity: PowerOff
+      - service: remote.turn_off
+        data:
+          entity_id: remote.living_room
+
+  tv_living_room_activity_on:
+    alias: 'Turn On Tv'
+    sequence:
+      - service: remote.send_command
+        data_template:
+          command: PowerOn
+          device: 15207304
+          entity_id: remote.living_room
+      - service: remote.turn_on
+        data_template:
+          entity_id: remote.living_room
+          activity: Watch TV
+
+  tv_bedroom_activity_off:
+    alias: 'Turn Off Tv Bedroom'
+    sequence:
+      - service: remote.send_command
+        data_template:
+          command: PowerOff
+          device: 32529848
+          entity_id: remote.bedroom
+      - service: remote.turn_on
+        data_template:
+          entity_id: remote.bedroom
+          activity: PowerOff
+      - service: remote.turn_off
+        data:
+          entity_id: remote.bedroom
+
+  tv_bedroom_activity_on:
+    alias: 'Turn On Tv Bedroom'
+    sequence:
+      - service: remote.send_command
+        data_template:
+          command: PowerOn
+          device: 32529848
+          entity_id: remote.bedroom
+      - service: remote.turn_on
+        data_template:
+          entity_id: remote.bedroom
+          activity: Watch TV bedroom

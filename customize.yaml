@@ -1,0 +1,52 @@
+group.all_devices:
+  hidden: true
+group.all_vacuum_cleaners:
+  hidden: true
+light.custom_group_for_lights:
+  hidden: true
+group.all_switches:
+  hidden: true
+group.all_remotes:
+  hidden: true
+group.all_lights:
+  hidden: true
+group.all_fans:
+  hidden: true
+media_player.kd49xe8396:
+  friendly_name: Sony TV Cast
+device_tracker.oneplus_5:
+  friendly_name: Gianfranco
+device_tracker.barbaras_iphone_work:
+  friendly_name: Barbara
+camera.foscam_camera_2:
+  friendly_name: Bedroom camera
+camera.foscam_camera:
+  friendly_name: Linving room camera
+sensor.netatmo_netatmo_internal_noise:
+  friendly_name: Noise
+sensor.netatmo_netatmo_internal_2_co2:
+  friendly_name: CO2
+sensor.living_room_thermostat_target:
+  friendly_name: Thermostat target
+sensor.netatmo_netatmo_internal_co2:
+  friendly_name: CO2
+sensor.netatmo_netatmo_internal_2_temperature:
+  friendly_name: Temperature
+sensor.netatmo_netatmo_internal_temperature:
+  friendly_name: Temperature
+vacuum.bot:
+  friendly_name: Neato D7
+sensor.netatmo_netatmo_internal_humidity:
+  friendly_name: Humidity
+sensor.netatmo_netatmo_external_humidity:
+  friendly_name: Humidity
+sensor.netatmo_netatmo_internal_pressure:
+  friendly_name: Pressure
+sensor.netatmo_netatmo_internal_2_humidity:
+  friendly_name: Humidity
+sensor.netatmo_netatmo_external_temperature:
+  friendly_name: Temperature
+remote.living_room:
+  friendly_name: Harmony
+remote.bedroom:
+  friendly_name: Harmony

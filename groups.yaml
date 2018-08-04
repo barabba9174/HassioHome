@@ -1,0 +1,99 @@
+  default_view:
+    view: yes
+    icon: mdi:home
+    name: Home
+    control: hidden
+    entities:
+      - sun.sun
+      - binary_sensor.home_away
+      - sensor.tower_hamlets
+      - group.living
+      - group.bedroom
+      - group.bathroom
+      - group.entryway
+      - group.balcony
+      - group.awesomepeople
+  living:
+    name: Living Room
+    control: hidden
+    entities:
+      - light.lampada_trump
+      - light.lampada_lady
+      - vacuum.bot
+      - sensor.netatmo_netatmo_internal_temperature
+      - sensor.netatmo_netatmo_internal_co2
+      - sensor.netatmo_netatmo_internal_humidity
+      - sensor.netatmo_netatmo_internal_noise
+      - sensor.netatmo_netatmo_internal_pressure
+      - sensor.living_room_thermostat_target
+      - zwave.zwaveme_zme_uzb1_usb_stick
+      - camera.foscam_camera
+      - media_player.kd49xe8396
+      - media_player.living_room_speaker
+      - camera.bot_cleaning_map
+      - switch.sky_living_room
+      - switch.tv_living_room
+      - remote.living_room
+  bedroom:
+    name: Bedroom
+    control: hidden
+    entities:
+      - input_boolean.goodnight
+      - light.lampada_gianfranco
+      - light.lampada_barbara
+      - light.lampada_camera
+      - fan.xiaomi_miio_device
+      - sensor.netatmo_netatmo_internal_2_temperature
+      - sensor.netatmo_netatmo_internal_2_co2
+      - sensor.netatmo_netatmo_internal_2_humidity
+      - camera.foscam_camera_2
+      - media_player.apple_tv_camera_da_letto
+      - media_player.bedroom_tv
+      - media_player.bedroom_speaker
+      - media_player.40as640_series
+      - switch.sky_bedroom
+      - switch.tv_bedroom
+      - remote.bedroom
+  balcony:
+    name: Balcony
+    control: hidden
+    entities:
+      - sensor.netatmo_netatmo_external_temperature
+      - sensor.netatmo_netatmo_external_humidity
+  bathroom:
+    name: Bathroom
+    control: hidden
+    entities:
+      - media_player.bathroom_speaker
+  entryway:
+    name: Entry Way
+    control: hidden
+    entities:
+      - light.lampada_entrata
+  awesomepeople:
+    name: Awesome People
+    entities:
+      - device_tracker.barbaras_iphone_work
+      - device_tracker.oneplus_5
+  goodnight:
+    name: Goodnight
+    entities:
+      - remote.living_room
+      - light.lampada_trump
+      - light.lampada_lady
+  group.all_devices:
+    view: false
+  group.all_vacuum_cleaners:
+    view: false
+  group.custom_group_for_lights:
+     view: false
+  group.all_switches:
+    view: false
+  group.all_remotes:
+    view: false
+  group.all_lights:
+    view: false
+  group.all_fans:
+    view: false
+  light.custom_group_for_lights:
+    view: false

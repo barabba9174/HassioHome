@@ -1,0 +1,46 @@
+  - platform: template
+    switches:
+
+      sky_living_room:
+        friendly_name: "Watch Sky"
+        icon_template: mdi:television
+        value_template: "{{ states.remote.living_room.attributes.current_activity == 'Watch Sky' }}"
+        turn_on:
+          service: script.turn_on
+          entity_id: script.sky_living_room_activity_on
+        turn_off:
+          service: script.turn_on
+          entity_id: script.sky_living_room_activity_off
+
+      sky_bedroom:
+        friendly_name: "Watch Sky"
+        icon_template: mdi:television
+        value_template: "{{ states.remote.bedroom.attributes.current_activity == 'Watch Sky bedroom' }}"
+        turn_on:
+          service: script.turn_on
+          entity_id: script.sky_bedroom_activity_on
+        turn_off:
+          service: script.turn_on
+          entity_id: script.sky_bedroom_activity_off
+
+      tv_living_room:
+        friendly_name: "Watch Tv"
+        icon_template: mdi:television
+        value_template: "{{ states.remote.living_room.attributes.current_activity == 'Watch TV' }}"
+        turn_on:
+          service: script.turn_on
+          entity_id: script.tv_living_room_activity_on
+        turn_off:
+          service: script.turn_on
+          entity_id: script.tv_living_room_activity_off
+
+      tv_bedroom:
+        icon_template: mdi:television
+        friendly_name: "Watch Tv"
+        value_template: "{{ states.remote.bedroom.attributes.current_activity == 'Watch TV bedroom' }}"
+        turn_on:
+          service: script.turn_on
+          entity_id: script.tv_bedroom_activity_on
+        turn_off:
+          service: script.turn_on
+          entity_id: script.tv_bedroom_activity_off
