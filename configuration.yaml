@@ -18,6 +18,7 @@ homeassistant:
 
 # Enables the frontend
 frontend:
+  javascript_version: es5
 
 # Enables configuration UI
 config:
@@ -25,13 +26,15 @@ config:
 ios:
 
 http:
-  # Secrets are defined in the file secrets.yaml
-  api_password: !secret api_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   base_url: hassio.local:8123
+  #base_url: https://tucis.duckdns.org:8123
+  #ssl_certificate: /ssl/fullchain.pem
+  #ssl_key: /ssl/privkey.pem
+  # Secrets are defined in the file secrets.yaml
+  api_password: !secret api_password
   cors_allowed_origins:
     - http://hassio.local:7080
-
 zone:
   - name: Home
     latitude: !secret latitude
@@ -88,7 +91,7 @@ remote:
     name: Bedroom
   - platform: harmony
     name: Living room
-    
+
 # Foscam
 camera:
   - platform: foscam
@@ -105,8 +108,7 @@ camera:
 neato:
   username: !secret neato_username
   password: !secret neato_password
-  
-  
+
 # Nest
 nest:
   client_id: !secret nest_client_id
@@ -118,17 +120,17 @@ fan:
   - platform: xiaomi_miio
     host: !secret xiaomi_miio_ip
     token: !secret xiaomi_miio_token
-    
-# Netatmo    
+
+# Netatmo
 netatmo:
   api_key: !secret netatmo_api_key
   secret_key: !secret netatmo_secret_key
   username: !secret netatmo_username
   password: !secret netatmo_password
-  
+
 device_tracker:
   - platform: bluetooth_tracker
-  
+
 ifttt:
   key: !secret ifttt_key
 
@@ -150,7 +152,7 @@ proximity:
       - device_tracker.oneplus_5
     tolerance: 100
     unit_of_measurement: km
-  
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
