@@ -4,7 +4,7 @@
     sky_living_room:
       friendly_name: "Watch Sky"
       icon_template: mdi:television
-      value_template: "{% if states.remote.living_room.state %}{{ states.remote.living_room.attributes.current_activity == 'Watch Sky' }}{% endif %}"
+      value_template: "{% if states.remote.living_room.state %}{{ states.remote.living_room.attributes.current_activity == 'Watch Sky' }}{% else %}false{% endif %}"
       turn_on:
         service: script.turn_on
         entity_id: script.sky_living_room_activity_on
@@ -15,7 +15,7 @@
     sky_bedroom:
       friendly_name: "Watch Sky"
       icon_template: mdi:television
-      value_template: "{% if states.remote.bedroom.state %}{{ states.remote.bedroom.attributes.current_activity == 'Watch Sky bedroom' }}{% endif %}"
+      value_template: "{% if states.remote.bedroom.state %}{{ states.remote.bedroom.attributes.current_activity == 'Watch Sky bedroom' }}{% else %}false{% endif %}"
       turn_on:
         service: script.turn_on
         entity_id: script.sky_bedroom_activity_on
@@ -26,7 +26,7 @@
     tv_living_room:
       friendly_name: "Watch Tv"
       icon_template: mdi:television
-      value_template: "{% if states.remote.living_room.state %}{{ states.remote.living_room.attributes.current_activity == 'Watch TV' }}{% endif %}"
+      value_template: "{% if states.remote.living_room.state %}{{ states.remote.living_room.attributes.current_activity == 'Watch TV' }}{% else %}false{% endif %}"
       turn_on:
         service: script.turn_on
         entity_id: script.tv_living_room_activity_on
@@ -37,7 +37,7 @@
     tv_bedroom:
       icon_template: mdi:television
       friendly_name: "Watch Tv"
-      value_template: "{% if states.remote.bedroom.state %}{{ states.remote.bedroom.attributes.current_activity == 'Watch TV bedroom' }}{% endif %}"
+      value_template: "{% if states.remote.bedroom.state %}{{ states.remote.bedroom.attributes.current_activity == 'Watch TV bedroom' }}{% else %}false{% endif %}"
       turn_on:
         service: script.turn_on
         entity_id: script.tv_bedroom_activity_on
