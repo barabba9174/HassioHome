@@ -27,11 +27,9 @@ ios:
 
 http:
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  base_url: hassio.local:8123
-  #base_url: https://tucis.duckdns.org:8123
-  #ssl_certificate: /ssl/fullchain.pem
-  #ssl_key: /ssl/privkey.pem
-  # Secrets are defined in the file secrets.yaml
+  base_url: !secret base_url
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
   api_password: !secret api_password
   cors_allowed_origins:
     - http://hassio.local:7080
@@ -43,7 +41,7 @@ zone:
     icon: mdi:home
 
 zwave:
-  usb_path: /dev/ttyACM0
+  usb_path: !secret usb_path
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -134,24 +132,14 @@ device_tracker:
 ifttt:
   key: !secret ifttt_key
 
-
-panel_iframe:
-  controlpanel:
-    title: UI Control Panel
-    icon: mdi:view-dashboard
-    url: http://hassio.local:7080
-  configuration:
-    title: Edit Configuration
-    icon: mdi:folder-edit
-    url: http://hassio.local:3218
-
 proximity:
   home:
     devices:
-      - device_tracker.barbaras_iphone_work
-      - device_tracker.oneplus_5
+      - !secret track1
+      - !secret track2
     tolerance: 100
     unit_of_measurement: km
+
 
 group: !include groups.yaml
 automation: !include automations.yaml
